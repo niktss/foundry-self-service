@@ -11,7 +11,9 @@ RUN --mount=type=bind,source=foundryapp.zip,target=/tmp/foundryapp.zip \
     unzip /tmp/foundryapp.zip
 
 VOLUME /foundry/data
+WORKDIR /foundry/data
 ENV FOUNDRY_VTT_DATA_PATH /foundry/data
+
 
 EXPOSE 30000
 
